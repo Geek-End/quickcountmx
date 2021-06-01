@@ -38,9 +38,12 @@ write_results <- function(fit, file_name, team, #tot_estratos, n_estratos, tot_c
   p <- stringr::str_split(path_mailbox, "/", simplify = TRUE)
   l <- length(p)-2
   npath_mailbox <- paste(p[1:l],collapse='/')
+  logger::log_info(npath_mailbox)
 
-  readr::write_csv(tab_pctpropobs, paste0(npath_mailbox, "/pctpropobs/", "pctpropobs",EN,".csv"),
-             append = TRUE, col_names = FALSE)
+  # PCTPROPOBS sin append
+  param_append <- file.exists( paste0(path_out, "/pctpropobs",EN,".csv"))
+  readr::write_csv(tab_pctpropobs, paste0(path_out, "/pctpropobs",EN,".csv"),
+                   append = param_append , col_names = FALSE)
 
   row1 <- paste(stringr::str_pad(names(tab_candidatos),7,pad=" "),collapse = " ")
   row2 <- paste(stringr::str_pad(as.character(tab_candidatos[1,]),7,pad = " "), collapse = " ")
