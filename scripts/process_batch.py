@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+# Python 3.8.5
 # usage:
 # python3 scripts/process_batch.py --abs_filename /home/rstudio/workspace/cotecora/unicom/cortes/zac/REMESAS0232291840.txt --path_out /home/rstudio/workspace/cotecora/mancera/zac --path_mailbox /home/rstudio/workspace/cotecora/buzon2/estimaciones/zac --team ortizm --log_file zac.log --vars_file _vars
 # python3 scripts/process_batch.py --abs_filename /home/rstudio/workspace/cotecora/unicom/cortes/zac/REMESAS0232291840.txt --path_out /home/rstudio/workspace/cotecora/mancera/zac --path_mailbox /home/rstudio/workspace/cotecora/buzon2/estimaciones/zac --team ortizm --log_file zac.log
 # python3 scripts/process_batch.py --abs_filename /home/rstudio/workspace/cotecora/unicom/cortes/zac/REMESAS0232291840.txt --path_out /home/rstudio/workspace/cotecora/mancera/zac --path_mailbox /home/rstudio/workspace/cotecora/buzon2/estimaciones/zac --team ortizm --vars_file _vars
 # python3 scripts/process_batch.py --abs_filename /home/rstudio/workspace/cotecora/unicom/cortes/zac/REMESAS0232291840.txt --path_out /home/rstudio/workspace/cotecora/mancera/zac --path_mailbox /home/rstudio/workspace/cotecora/buzon2/estimaciones/zac --team ortizm
+# python3 scripts/process_batch.py --abs_filename data-raw/REMESAS0232061900.txt --path_out ../output --path_mailbox ../output/mailbox --team geeky --log_file test.log --vars_file _vars
 
 from settings import Init_vars
 import sys, getopt
